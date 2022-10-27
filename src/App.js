@@ -9,13 +9,13 @@ import SearchFeed from "./components/SearchFeed";
 const App = () => {
   return (
     <BrowserRouter>
-      <Box sx={{ backgroundColor: "000" }}>
+      <Box sx={{ backgroundColor: "#000" }}>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Feed />} />
+          <Route exact path="/" element={<Feed />} />
           <Route path="/video/:id" element={<VideoDetail />} />
-          <Route path="/video/:id" element={<ChannelDetail />} />
-          <Route path="/video/:searchTerm" element={<SearchFeed />} />
+          <Route path="/channel/:id" element={<ChannelDetail />} />
+          <Route path="/search/:searchTerm" element={<SearchFeed />} />
         </Routes>
       </Box>
     </BrowserRouter>
