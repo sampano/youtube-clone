@@ -9,7 +9,6 @@ import {
   demoChannelTitle,
 } from "../utils/constants";
 
-
 const VideoCard = ({
   video: {
     id: { videoId },
@@ -43,9 +42,7 @@ const VideoCard = ({
       >
         <Typography variant="subtitle2" color="gray">
           {snippet?.channelTitle || demoChannelTitle}
-          <CheckCircleIcon
-            sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
-          />
+          <CheckCircle sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
         </Typography>
       </Link>
     </CardContent>
