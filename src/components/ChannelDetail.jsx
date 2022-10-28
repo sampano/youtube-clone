@@ -4,13 +4,12 @@ import { Box } from "@mui/material";
 import Videos from "./Videos";
 import ChannelCard from "./ChannelCard";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-
 const ChannelDetail = () => {
-  const [channelDetail, setChannelDetail] = useState(null);
-  const [videos, setVideos] = useState([]);
+  const [channelDetail, setChannelDetail] = useState();
+  const [videos, setVideos] = useState(null);
+
   const { id } = useParams();
 
-  console.log("Channel Details", videos);
   useEffect(() => {
     const fetchResults = async () => {
       const data = await fetchFromAPI(`channels?part=snippet&id=${id}`);
