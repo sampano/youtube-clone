@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import Categories from "./SideBar";
+import SideBar from "./SideBar";
 import Videos from "./Videos";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
@@ -16,6 +16,8 @@ const Feed = () => {
     );
   }, [selectedCategory]);
 
+  console.log("feed", selectedCategory);
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -25,9 +27,10 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <Categories
+        <SideBar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
+          //  SideBar will throw value to fetchFromAPI
         />
 
         <Typography
