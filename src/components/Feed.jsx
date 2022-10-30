@@ -35,7 +35,7 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          SAMP Project
+          Coded by Sam P.
         </Typography>
       </Box>
 
