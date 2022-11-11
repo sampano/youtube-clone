@@ -30,7 +30,7 @@ const Feed = () => {
         <SideBar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-          //  SideBar will throw value to fetchFromAPI
+          //  Passing these to Sidebar
         />
 
         <Typography

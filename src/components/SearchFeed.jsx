@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import Videos from "./Videos";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-const SearchFeed = () => {
+const SearchFeed = ({ selectedCategory, setSelectedCategory }) => {
   const [videos, setVideos] = useState(null);
   const { searchTerm } = useParams();
 
